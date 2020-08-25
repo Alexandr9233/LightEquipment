@@ -1,0 +1,86 @@
+$mainFont: "Open Sans Condensed";
+$fontOswland: "Oswald";
+
+@mixin titleFont {
+    font-family: $fontOswland;
+    font-size: 48px;
+    line-height: 71px;
+    color: #fff;
+}
+
+@mixin left {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border: solid 2px #005BC1;
+    padding: 20px;
+    border-right: solid 1px #005BC1;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 3px;
+        background: #005BC1;
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 3px;
+        background: #005BC1;
+        position: absolute;
+        top: 60%;
+        left: 25%;
+        transform: rotate(45deg);
+    }
+}
+
+@mixin right {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border: solid 2px #005BC1;
+    padding: 20px;
+    border-left: solid 1px #005BC1;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 3px;
+        background: #005BC1;
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 3px;
+        background: #005BC1;
+        position: absolute;
+        top: 60%;
+        left: 25%;
+        transform: rotate(-45deg);
+    }
+}
+
+@mixin h2 {
+    position: relative;
+    padding-left: 140px;
+    font-family: $fontOswland;
+    font-size: 30px;
+    line-height: 44px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #343434;
+}
